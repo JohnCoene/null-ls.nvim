@@ -31,7 +31,7 @@ return h.make_builtin({
                           con = file("stdin")
                           temp = tempfile("styler",fileext = ".%s")
                           writeLines(readLines(con), temp)
-                          styler::style_file(temp)
+                          grkstyle::grk_style_file(temp)
                           cat(paste0(readLines(temp), collapse = '\n'))
                           close(con)
                         ]],
