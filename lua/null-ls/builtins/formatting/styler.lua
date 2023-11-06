@@ -22,7 +22,7 @@ return h.make_builtin({
             }
             if params.ft == "r" then
                 return vim.list_extend(default_args, {
-                    [[con=file("stdin");output=styler::style_text(readLines(con));close(con);print(output, colored=FALSE)]],
+                    [[con=file("stdin");output=grkstyle::grk_style_text(readLines(con));close(con);print(output, colored=FALSE)]],
                 })
             end
             return vim.list_extend(default_args, {
